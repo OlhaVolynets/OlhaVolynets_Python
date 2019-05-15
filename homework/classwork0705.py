@@ -59,12 +59,39 @@
 #     print("Input Eror")
 
 # -------------------------------5----------------------------
-def summa_of_number(number):
-    """This function counts sum of digits of the entered number"""
-    x = 0
-    for i in range(number + 1):
-        x += i
-    return x
+# def sum_of_number(number):
+#     """This function counts sum of digits of the entered number"""
+#     x = 0
+#     for i in range(number + 1):
+#         x += i
+#     return x
+#
+# print(sum_of_number(5))
+# print(sum_of_number.__doc__)
 
-print(summa_of_number(5))
-print(summa_of_number.__doc__)
+# -----------------------------6-------------------------------
+"""This is a program with simple calculator """
+
+print("The number 0 closes the program")
+
+while True:
+    x = float(input("Enter the first number, x=  "))
+    symbl = input("Enter one of symbols (+, -, *, /): ")
+    y = float(input("Enter the second number, y=  "))
+
+    if symbl == "0":
+        print("Thank you for choosing our product")
+        break
+    if symbl == "+":
+        print("x + y =", x + y)
+    elif symbl == "-":
+        print("x - y =", x - y)
+    elif symbl == "*":
+        print("x * y =", x * y)
+    elif symbl == "/":
+        if x == 0 or y == 0:
+            print("Division by zero!")
+        else:
+            print("x / y =", x / y)
+    else:
+        print("Input Error")
